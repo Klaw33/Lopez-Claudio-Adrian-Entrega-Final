@@ -1,2 +1,2 @@
-# repositorio1
+PreEntrega2+Lopez-Claudio
 mi primer repositorio
