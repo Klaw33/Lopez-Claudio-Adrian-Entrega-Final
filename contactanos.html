@@ -12,7 +12,7 @@
     crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css" />
 </head>
-<body>
+<body class="style-body">
   <header class="main__header">
     <img
       width="85"
@@ -20,41 +20,32 @@
       src="./img/logo-removebg-preview.png"
       alt="logo de la empresa"
     />
-    <nav>
-      <ul class="main__header__nav">
-        <li>
-          <a href="./index.html">INICIO</a>
-        </li>
-        <li>
-          <a href="Servicios.html">SERVICIOS</a>
-        </li>
-        <li>
-          <a href="./Preguntas Frecuentes.html">PREGUNTAS FRECUENTES</a>
-        </li>
-        <li><a href="./Ubicacion.html">UBICACION</a></li>
-        <li>
-          <a href="contactanos.html">CONTACTANOS</a>
-        </li>
-        <li>
-          <a
-            href="https://instagram.com/daniela_bellezaunas?igshid=YmMyMTA2M2Y="
-            ><img
-              width="30"
-              height="30"
-              src="./css/logo insta.png"
-              alt="instagram"
-          /></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/bellezadeunas"
-            ><img
-              width="30"
-              height="30"
-              src="./img/logo facebook.png"
-              alt="facebook"
-          /></a>
-        </li>
-      </ul>
+    <nav class="navbar navbar-expand-lg ">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./index.html" target="_blank">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./Servicios.html" target="_blank">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./Preguntas Frecuentes.html" target="_blank">PREGUNTAS FRECUENTES</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./contactanos.html" target="_blank">CONTACTANOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="./Ubicacion.html" target="_blank">UBICACION</a>
+            </li>
+          </form>
+        </div>
+      </div>
     </nav>
   </header>
   <div class="fixed">
@@ -69,18 +60,19 @@
   </div>
   </header>
   <div class="formulario">      
-    <h1>Formulario de contacto</h1>
-      <h3>Escríbenos y en breve los pondremos en contacto contigo</h3>
+    <div class="formulario__conteiner">
+    <h3>Formulario de contacto</h3>
+      <h4>Escríbenos y en breve los pondremos en contacto contigo</h4>
         <form action="submeter-formulario.php" method="post">       
             <p>
                 <label for="nombre" class="colocar_nombre">Nombre
                 </label>
-                  <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+                  <input type="text" name="introducir_nombre" id="nombre" placeholder="Escribe tu nombre">
               </p>
               <p>
                 <label for="email" class="colocar_email">Email
                 </label>
-                  <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+                  <input type="email" name="introducir_email" id="email"  placeholder="Escribe tu Email">
               </p>
               <p>
                 <label for="telefone" class="colocar_telefono">Teléfono
@@ -88,20 +80,15 @@
                   <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
               </p>    
               <p>
-                <label for="website" class="colocar_website">Sitio web
-                </label>
-                  <input type="url" name="introducir_website" id="website" placeholder="Escribe la URL de tu web">
-              </p>    
-              <p>
                 <label for="asunto" class="colocar_asunto">Asunto
                 </label>
-                  <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+                  <input type="text" name="introducir_asunto" id="assunto"  placeholder="Escribe un asunto">
               </p>    
               <p>
                 <label for="mensaje" class="colocar_mensaje">Mensaje
                   
                 </label>                     
-                  <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+                  <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"  placeholder="Deja aquí tu comentario..."></textarea> 
               </p>         
               <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
               <p class="aviso">
@@ -109,23 +96,7 @@
         </form>
   </div>  
 </div>
-    <form class="prop__form" action="formulario">
-        <label for="name">Nombre y Apellido</label>
-        <input type="name" name="name">
-        <label for="Email">email</label>
-        <input type="email" name="email">
-        <label for="password">Contraseña</label>
-        <input type="password" name="password">
-    <textarea name="message" id="" cols="20" rows="8"></textarea>
-    <label for="bussines">PYME</label>
-        <input type="radio" name="bussines"
-    value="PYME">
-    <label for="bussines">Company</label>
-    <input type="radio" name="bussines"
-    value="Company">
-    <input type="submit" value="Enviar Formulario">
-    <input type="reset" value="Limpiar Formulario">
-</form>
+    
 <footer class="footer__contents">
   <img
     class="footer__contents__img"

@@ -40,13 +40,9 @@ a {
   align-items: center;
   justify-content: end;
 }
-.main__header__nav {
-  display: flex;
-  flex-wrap: wrap;
-}
+
 .main__principal {
   display: flex;
-
   color: aliceblue;
   justify-content: center;
   height: 100vh;
@@ -69,6 +65,14 @@ a {
 }
 .our__work__services img {
   width: 90%;
+}
+.card {
+  background: rgb(214, 181, 209);
+  background: linear-gradient(
+    176deg,
+    rgba(214, 181, 209, 1) 42%,
+    rgba(255, 254, 254, 1) 77%
+  );
 }
 
 @media (min-width: 768px) {
@@ -122,30 +126,9 @@ a {
     position: fixed;
     width: 100%;
     height: 80px;
-    display: grid;
-    grid-template-columns: 200px auto;
-    align-items: center;
-    justify-content: end;
     z-index: 1000;
   }
-  .main__header__nav {
-    display: grid;
-    height: 80px;
-    grid-template-columns: repeat(7, 1fr);
-    height: 100%;
-    justify-self: end;
-  }
-  .main__header ul li {
-    width: 10%;
-    list-style: none;
-  }
-  .main__header nav {
-    width: 90%;
-  }
-  .main__header__nav a {
-    display: flex;
-    padding: 15px;
-  }
+
   .style-body {
     background: rgb(214, 181, 209);
     background: linear-gradient(
@@ -155,16 +138,23 @@ a {
     );
   }
   .main__principal {
-    display: flex;
     color: aliceblue;
-    justify-content: start;
-    height: 100vh;
-    align-items: center;
     padding-top: 70px;
-    flex-direction: column;
   }
-  .carousel {
+  .main__principal__container {
+    display: flex;
     align-items: center;
+    height: 100vh;
+  }
+  .main__principal__carous {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .main__princial__paragraph {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
   }
 
   .our__work {
@@ -202,16 +192,10 @@ a {
     grid-area: serv06;
   }
   .img1 {
-      width:200px;
-      height:200px;
-      border-radius:150px;
-      border:10px solid rgb(223, 215, 215);
-  
-  }
-
-  .our__work__services {
     width: 200px;
     height: 200px;
+    border-radius: 150px;
+    border: 10px solid rgb(223, 215, 215);
   }
 
   .footer__contents {
@@ -221,14 +205,15 @@ a {
   .footer__contents__red-1 {
     margin-right: 25px;
   }
-  .main__servicios {
-    color: white;
-  }
+  
 
   .prop__form {
     padding-top: 10rem;
   }
   /**inicio Style Servicios**/
+  .main__servicios {
+    color: white;
+  }
   .conteiner-servicios {
     padding-top: 85px;
   }
@@ -243,16 +228,13 @@ a {
     padding-top: 95px;
     justify-content: space-around;
   }
-  .card {
-    background: rgb(214, 181, 209);
-  background: linear-gradient(
-    176deg,
-    rgba(214, 181, 209, 1) 42%,
-    rgba(255, 254, 254, 1) 77%
-  );
-  }
-  .formulario{
-    display: flex;
-    padding-top: 80px;
-  justify-content: center;}
+  
+
+.formulario {
+  padding-top: 120px;
+  text-align: center;
+  height: 100vh;
 }
+.main__ubicacion {
+  padding-top: 400px;
+}}
