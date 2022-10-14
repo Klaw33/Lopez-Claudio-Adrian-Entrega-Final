@@ -1,0 +1,28 @@
+.shadowed {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+.img1 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 8px solid rgb(223, 215, 215);
+}
+.style-body {
+  background: rgb(214, 181, 209);
+  background: linear-gradient(
+    176deg,
+    rgba(214, 181, 209, 1) 42%,
+    rgba(255, 254, 254, 1) 77%
+  );
+}
+@font-face {
+  font-family: "Nova";
+  src: url(../letras/FontsFree-Net-Proxima-Nova-Light.otf);
+  font-style: normal;
+}
+.title {
+  font-family: "Nova";
+  text-align: center;
+}

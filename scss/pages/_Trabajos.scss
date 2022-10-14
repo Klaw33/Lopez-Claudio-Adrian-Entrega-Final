@@ -1,0 +1,54 @@
+.body__testimonios {
+  @extend .style-body;
+}
+.our__services__grilla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.our__services__wrapper {
+  padding-top: 10rem;
+}
+.our__services__wrapper-title {
+  @extend .title;
+}
+@media (min-width: 992px) {
+  .our__services__grilla {
+    display: grid;
+    grid-template-areas:
+      "serv01 serv02 serv03"
+      "serv04 serv05 serv06"
+      "serv07 serv08 serv09";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 70px 40px;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .our__services__grilla-images {
+    justify-content: center;
+  }
+  .serv01 {
+    grid-area: serv01;
+  }
+  .serv02 {
+    grid-area: serv02;
+  }
+  .serv03 {
+    grid-area: serv03;
+  }
+  .serv04 {
+    grid-area: serv04;
+  }
+  .serv05 {
+    grid-area: serv05;
+  }
+  .serv06 {
+    grid-area: serv06;
+  }
+  .img2 {
+    width: 100px;
+    height: 100px;
+  }
+}

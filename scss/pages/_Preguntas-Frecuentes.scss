@@ -1,0 +1,11 @@
+/** Style Preguntas Frecuentes**/
+.card {
+  @extend .shadowed;
+}
+.card-text {
+  text-align: center;
+}
+.main__preguntas {
+  padding-top: 95px;
+  justify-content: space-around;
+}
