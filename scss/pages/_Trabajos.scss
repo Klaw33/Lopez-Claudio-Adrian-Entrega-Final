@@ -18,12 +18,13 @@
     grid-template-areas:
       "serv01 serv02 serv03"
       "serv04 serv05 serv06"
-      "serv07 serv08 serv09";
-    grid-template-rows: 1fr 1fr;
+      "serv07 serv08 serv09"
+      "serv10 serv11 serv12";
+    grid-template-rows: 1fr 1fr 1fr ;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 70px 40px;
     gap: 40px;
-    justify-content: center;
+    justify-items: center;
   }
 
   .our__services__grilla-images {

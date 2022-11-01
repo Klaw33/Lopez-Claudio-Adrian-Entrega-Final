@@ -1,4 +1,8 @@
 /** Style Preguntas Frecuentes**/
+* {
+  margin: 0;
+  padding: 0;
+}
 .card {
   @extend .shadowed;
 }
@@ -6,6 +10,9 @@
   text-align: center;
 }
 .main__preguntas {
-  padding-top: 95px;
-  justify-content: space-around;
+  padding-top: 90px;
+  width:97vw;
+  
 }
+.main__preguntas-primero{ padding-top: 50px;
+justify-content: space-around;  }

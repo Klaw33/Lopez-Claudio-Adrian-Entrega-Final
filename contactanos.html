@@ -38,14 +38,12 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./Preguntas Frecuentes.html">PREGUNTAS FRECUENTES</a>
             </li>
-            </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./Trabajos.html">TRABAJOS</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="./contactanos.html">CONTACTANOS</a>
             </li>
-          </form>
         </div>
       </div>
     </nav>
@@ -61,44 +59,27 @@
     </a>
   </div>
   </header>
-  <div class="formulario">      
-    <div class="formulario__conteiner">
-    <h3>Formulario de contacto</h3>
-      <h4>Escríbenos y en breve los pondremos en contacto contigo</h4>
-        <form action="submeter-formulario.php" method="post">       
-            <p>
-                <label for="nombre" class="colocar_nombre">Nombre
-                </label>
-                  <input type="text" name="introducir_nombre" id="nombre" placeholder="Escribe tu nombre">
-              </p>
-              <p>
-                <label for="email" class="colocar_email">Email
-                </label>
-                  <input type="email" name="introducir_email" id="email"  placeholder="Escribe tu Email">
-              </p>
-              <p>
-                <label for="telefone" class="colocar_telefono">Teléfono
-                </label>
-                  <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
-              </p>    
-              <p>
-                <label for="asunto" class="colocar_asunto">Asunto
-                </label>
-                  <input type="text" name="introducir_asunto" id="assunto"  placeholder="Escribe un asunto">
-              </p>    
-              <p>
-                <label for="mensaje" class="colocar_mensaje">Mensaje
-                  
-                </label>                     
-                  <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje"  placeholder="Deja aquí tu comentario..."></textarea> 
-              </p>         
-              <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>
-              <p class="aviso">
-              </p>          
+  <div class="formulario__contacto">  
+  <section class="form_wrap">
+        <section class="cantact_info">
+                <p class="info_title">INFORMACION DE CONTACTO</p>
+        </section>
+        <form action="" class="form_contact">
+            <h2>Envia un mensaje</h2>
+            <div class="user_info">
+                <label for="names">Nombres *</label>
+                <input type="text" id="names">
+                <label for="phone">Telefono / Celular</label>
+                <input type="text" id="phone">
+                <label for="email">Correo electronico *</label>
+                <input type="text" id="email">
+                <label for="mensaje">Mensaje *</label>
+                <textarea id="mensaje"></textarea>
+                <input type="button" value="Enviar Mensaje" id="btnSend">
+            </div>
         </form>
+    </section>
   </div>  
-</div>
-    
 <footer class="footer__contents">
   <img
     class="footer__contents__img"
