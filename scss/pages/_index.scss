@@ -84,12 +84,11 @@ a {
   padding: 5px 5px;
   background-color: transparent;
   color: #ffffff;
-  text-decoration: none;
   text-transform: uppercase;
-  font-family: "Helvetica", sans-serif;
   border-radius: 50px;
   text-align: center;
   width: 150px;
+  @include neo(52,25);
 }
 /*Estilos de footer*/
 .footer__contents {

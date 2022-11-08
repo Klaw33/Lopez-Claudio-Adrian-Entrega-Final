@@ -16873,12 +16873,13 @@ a {
   padding: 5px 5px;
   background-color: transparent;
   color: #ffffff;
-  text-decoration: none;
   text-transform: uppercase;
-  font-family: "Helvetica", sans-serif;
   border-radius: 50px;
   text-align: center;
-  width: 150px; }
+  width: 150px;
+  border-radius: 52;
+  background: #e0e0e0;
+  box-shadow: 25 25 27 #9d9d9d, -25 -25 27 #ffffff; }
 
 /*Estilos de footer*/
 .footer__contents {
