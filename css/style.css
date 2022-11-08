@@ -8397,11 +8397,11 @@ textarea.form-control-lg {
   border-radius: 50%;
   border: 8px solid #dfd7d7; }
 
-.style-body, .body__testimonios {
+.style-body, .card, .body__testimonios {
   background: #d6b5d1;
   background: linear-gradient(176deg, #d6b5d1 42%, #fffefe 77%); }
 
-.title, .our__work__wrapper-title, .our__services__wrapper-title {
+.title, .our__work__wrapper-title {
   font-family: "Nova";
   text-align: center; }
 
@@ -16802,10 +16802,6 @@ textarea.form-control-lg {
   src: url(../letras/FontsFree-Net-Proxima-Nova-Light.otf);
   font-style: normal; }
 
-.style-body, .body__testimonios {
-  background: #d6b5d1;
-  background: linear-gradient(176deg, #d6b5d1 30%, #fffefe 87%); }
-
 a {
   text-decoration: none;
   font-family: "Nova";
@@ -16831,14 +16827,24 @@ a {
   align-items: center;
   justify-content: end; }
 
+/*Estilos Main Principal*/
 .main__principal {
   display: flex;
   color: aliceblue;
   flex-direction: column;
   justify-content: center;
-  width: 100vw; }
+  width: 90vw; }
 
-.main__princial__paragraph {
+.main__princial__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; }
+
+.main__princial__wrapper-paragraph {
+  text-align: center;
+  font-size: 20px; }
+
+.main__princial__wrapper-title {
   text-align: center; }
 
 .main__principal__conteiner {
@@ -16849,10 +16855,15 @@ a {
 .main__principal__img img {
   width: 90%; }
 
+/*Estilos de nuestros trbajos*/
 .our__work {
   padding: 30px 15px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  width: 90vw; }
+
+.our__work__wrapper-title {
+  text-align: start; }
 
 .our__work__services img {
   width: 90%; }
@@ -16869,12 +16880,38 @@ a {
   text-align: center;
   width: 150px; }
 
-.card {
-  background: #d6b5d1;
-  background: linear-gradient(176deg, #d6b5d1 42%, #fffefe 77%); }
-
+/*Estilos de footer*/
 .footer__contents {
-  display: flex; }
+  width: 90vw;
+  display: grid;
+  grid-template-areas: "logo seguinos ubicacion";
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 0.3fr; }
+
+.footer__contents__img {
+  grid-area: logo;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.redes01 {
+  grid-area: redes01; }
+
+.text-redes {
+  grid-area: text-redes;
+  text-align: center; }
+
+.footer__contents__seguinos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.footer__contents__ubicacion {
+  grid-area: ubicacion;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 @media (min-width: 768px) {
   .main__header {
@@ -16882,9 +16919,11 @@ a {
     justify-content: space-between; }
   .main__header__nav a {
     padding-left: 10px; }
+  /*Estilos de main principal*/
   .main__principal__img img {
     width: 100%;
     height: 100%; }
+  /*Estilos de nuestros trabajos*/
   .our__work {
     display: grid;
     grid-template-areas: "title serv01 serv02 serv03" "title serv04 serv05 serv06";
@@ -16914,6 +16953,7 @@ a {
     width: 100%;
     height: 80px;
     z-index: 1000; }
+  /*Estilos Main principal*/
   .main__principal {
     color: aliceblue;
     padding-top: 70px; }
@@ -16924,11 +16964,12 @@ a {
   .main__principal__carous {
     display: flex;
     flex-direction: column;
-    width: 400px; }
+    width: 375px; }
   .main__princial__paragraph {
     display: flex;
     flex-direction: column;
     text-align: center; }
+  /*Estilos de nuestros trabajos*/
   .our__work {
     display: grid;
     grid-template-areas: "title serv01 serv02 serv03" "title serv04 serv05 serv06";
@@ -16937,7 +16978,7 @@ a {
     padding: 70px 40px;
     gap: 40px; }
   .our__work__wrapper {
-    grid-area: title;
+    grid-area: "title";
     display: flex;
     flex-direction: column;
     justify-content: center; }
@@ -16952,18 +16993,7 @@ a {
   .serv05 {
     grid-area: serv05; }
   .serv06 {
-    grid-area: serv06; }
-  .footer__contents {
-    padding-left: 41rem;
-    padding-top: 1rem; }
-  .footer__contents__red-1 {
-    margin-right: 25px; }
-  .prop__form {
-    padding-top: 10rem; }
-  .formulario {
-    padding-top: 120px;
-    text-align: center;
-    height: 100vh; } }
+    grid-area: serv06; } }
 
 /** Style Preguntas Frecuentes**/
 * {
@@ -16982,18 +17012,58 @@ a {
   justify-content: space-around; }
 
 /**inicio Style Servicios**/
-.main__servicios {
-  color: white; }
+.card-title {
+  text-align: center; }
 
 .conteiner-servicios {
   padding-top: 85px; }
 
-.card-title {
-  text-align: center; }
+.card {
+  align-items: center; }
 
 .imghw {
-  width: 400px;
-  height: 400px; }
+  width: 300px;
+  height: 300px; }
+
+.card-group {
+  padding-top: 1rem; }
+
+/*Estilos de footer*/
+.footer__contents {
+  width: 90vw;
+  display: grid;
+  grid-template-areas: "logo seguinos ubicacion";
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 0.3fr; }
+
+.footer__contents__img {
+  grid-area: logo;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.redes01 {
+  grid-area: redes01; }
+
+.text-redes {
+  grid-area: text-redes;
+  text-align: center; }
+
+.footer__contents__seguinos {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.footer__contents__ubicacion {
+  grid-area: ubicacion;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+@media (min-width: 992px) {
+  .card-group {
+    padding-top: 5rem; } }
 
 .our__services__grilla {
   display: flex;
@@ -17002,6 +17072,14 @@ a {
 
 .our__services__wrapper {
   padding-top: 10rem; }
+
+.our__services__wrapper-title {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 52px;
+  background: #e0e0e0;
+  box-shadow: 25px 25px 22px #9d9d9d, -25px -25px 22px #ffffff; }
 
 @media (min-width: 992px) {
   .our__services__grilla {
@@ -17030,186 +17108,124 @@ a {
     width: 100px;
     height: 100px; } }
 
-@font-face {
-  font-family: "FontAwesome";
-  src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
-  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+* {
+  box-sizing: border-box; }
 
-/* FORMULARIO =================================== */
-.formulario__contacto {
+.content {
+  height: 100vh;
+  padding-top: 4.5rem; }
+
+.container {
+  max-width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.5em; }
+
+ul {
+  list-style: none;
+  padding: 0; }
+
+.contact-wrapper {
+  box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.3); }
+
+.contact-wrapper > * {
+  padding: 1em; }
+
+.contact-form {
+  background: white; }
+
+.contact-form form {
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+
+.contact-form form label {
+  display: block; }
+
+.contact-form form p {
+  margin: 0;
+  padding: 1em; }
+
+.contact-form form .block {
+  grid-column: 1 / 3; }
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: none;
+  background: none;
+  outline: 0;
+  color: black;
+  border-bottom: 1px solid #d630c8; }
+
+.contact-form form button {
+  background: #f5a2ab;
+  border: 0;
+  text-transform: uppercase;
+  padding: 1em; }
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: #aa3e98;
+  color: #fff;
+  transition: background-color 1s ease-out;
+  outline: 0; }
+
+/* CONTACT INFO */
+.contact-info {
+  background: white; }
+
+.contact-info h4, .contact-info .h4,
+.contact-info ul,
+.contact-info p {
+  text-align: center;
+  margin: 0 0 1rem 0; }
+
+/*Estilos de footer*/
+.footer__contents {
+  width: 90vw;
+  display: grid;
+  grid-template-areas: "logo seguinos ubicacion";
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 0.3fr;
+  padding-top: 12rem; }
+
+.footer__contents__img {
+  grid-area: logo;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  padding: 8rem; }
+  justify-content: center; }
 
-.form_wrap {
-  width: 1050px;
-  height: 500px;
-  display: flex;
-  background: transparent;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); }
+.redes01 {
+  grid-area: redes01; }
 
-/* Informacion de Contacto*/
-.cantact_info::before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  opacity: 0.9; }
-
-.cantact_info {
-  width: 38%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-image: url("../fondo.jpg");
-  background-size: cover;
-  background-position: center center; }
-
-.info_title,
-.info_items {
-  position: relative;
-  z-index: 2;
-  color: black; }
-
-.info_title {
-  margin-bottom: 60px; }
-
-.info_title span {
-  font-size: 100px;
-  display: block;
-  text-align: center;
-  margin-bottom: 15px; }
-
-.info_title h2, .info_title .h2 {
-  font-size: 35px;
+.text-redes {
+  grid-area: text-redes;
   text-align: center; }
 
-.info_items p {
+.footer__contents__seguinos {
   display: flex;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 10px; }
-
-.info_items p:nth-child(1) span {
-  font-size: 30px;
-  margin-right: 10px; }
-
-.info_items p:nth-child(2) span {
-  font-size: 50px;
-  margin-right: 15px;
-  margin-left: 4px; }
-
-/* Formulario de contacto*/
-form.form_contact {
-  width: 62%;
-  padding: 30px 40px; }
-
-form.form_contact h2, form.form_contact .h2 {
-  font-size: 25px;
-  font-weight: 600;
-  color: #303030;
-  margin-bottom: 30px; }
-
-form.form_contact .user_info {
-  display: flex;
-  flex-direction: column; }
-
-form.form_contact label {
-  font-weight: 600; }
-
-form.form_contact input,
-form.form_contact textarea {
-  width: 100%;
-  padding: 8px 0px 5px;
-  margin-bottom: 20px;
-  border: none;
-  border-bottom: 2px solid #d1d1d1;
-  font-family: "Open sans";
-  color: #5a5a5a;
-  font-size: 14px;
-  font-weight: 400; }
-
-form.form_contact textarea {
-  max-width: 100%;
-  min-width: 100%;
-  max-height: 90px; }
-
-form.form_contact input[type="button"] {
-  width: 180px;
-  background: #4091ec;
-  padding: 10px;
-  border: none;
-  border-radius: 25px;
-  align-self: flex-end;
-  color: #fff;
-  font-family: "Open sans";
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer; }
-
-form.form_contact input[type="button"]:hover {
-  background: #3371b6; }
-
-/* Ventana de errores*/
-.modal_wrap {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center; }
 
-.mensaje_modal {
-  background: transparent;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
-  width: 400px;
-  padding: 30px 20px 15px; }
-
-.mensaje_modal h3, .mensaje_modal .h3 {
+.footer__contents__ubicacion {
+  grid-area: ubicacion;
   text-align: center;
-  font-family: "Ubuntu";
-  font-size: 20px;
-  font-weight: 400; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
-.mensaje_modal h3:after, .mensaje_modal .h3:after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background: #c5c5c5;
-  margin: 10px 0px 15px; }
-
-.mensaje_modal p {
-  font-size: 16px;
-  color: #606060; }
-
-.mensaje_modal p:before {
-  content: "\f00d";
-  font-family: FontAwesome;
-  display: inline-block;
-  color: #e25151;
-  margin-right: 8px; }
-
-#btnClose {
-  display: inline-block;
-  padding: 3px 10px;
-  margin-top: 10px;
-  background: #e25151;
-  color: #fff;
-  border: 2px solid #b14141;
-  cursor: pointer; }
+/* LARGE SIZE */
+@media (min-width: 700px) {
+  .contact-wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr; }
+  .contact-wrapper > * {
+    padding: 2em; }
+  .contact-info h4, .contact-info .h4,
+  .contact-info ul,
+  .contact-info p {
+    text-align: left; }
+  .footer__contents {
+    padding-top: 0.5rem; } }

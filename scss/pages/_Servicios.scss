@@ -1,12 +1,58 @@
 /**inicio Style Servicios**/
-.main__servicios {
-  color: white;
+.card-title {
+  text-align: center;
 }
 .conteiner-servicios {
   padding-top: 85px;
 }
-.card-title {
-  text-align: center;
+.card {
+  align-items: center;
+  @extend .style-body
 }
-.imghw{width: 400px;
-height: 400px;}
+
+.imghw {
+  width: 300px;
+  height: 300px;
+}
+.card-group {
+  padding-top: 1rem;
+}
+/*Estilos de footer*/
+.footer__contents {
+  width: 90vw;
+  display: grid;
+  grid-template-areas: "logo seguinos ubicacion";
+  grid-template-columns: 0.5fr;
+  grid-template-rows: 0.3fr;
+}
+
+.footer__contents__img {
+  grid-area: logo;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.redes01 {
+  grid-area: redes01;
+}
+.text-redes {
+  grid-area: text-redes;
+  text-align: center;}
+.footer__contents__seguinos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__contents__ubicacion{
+  grid-area: ubicacion;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;}
+
+@media (min-width: 992px) {
+  .card-group {
+    padding-top: 5rem;
+  }
+}
+
